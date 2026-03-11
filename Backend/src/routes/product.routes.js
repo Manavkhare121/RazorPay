@@ -1,8 +1,8 @@
-import express, { Router } from "express";
-import createProduct from "../controllers/product.controller.js";
-import { Router } from "react-router-dom";
-const router=Router()
+import express from "express"
+import { getItem ,createProduct} from "../controllers/product.controller.js"
+const router = express.Router()
 
-router.post("/",createProduct)
+router.post("/", createProduct)
+router.get("/get-item",getItem)
 
-export default router;
+export default router
