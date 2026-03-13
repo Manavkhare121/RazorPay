@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
+import PaymentButton from "./paymentButton";
 
 function App() {
 
@@ -38,12 +39,7 @@ function App() {
             <div className="price">
               {product.price.amount/100} {product.price.currency}
             </div>
-            <button
-              className="buy-btn"
-              onClick={handleBuy}
-            >
-              Buy Now
-            </button>
+            <PaymentButton />
           </div>
         </div>
       )}
